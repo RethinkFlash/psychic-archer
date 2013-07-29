@@ -48,10 +48,10 @@ module.exports = function(grunt) {
 
     //unit testing with karma
     karma: {
-	  unit: {
-	    configFile: 'karma.conf.js',
-	    singleRun: true,
-	  },
+  	  unit: {
+  	    configFile: 'karma.conf.js',
+  	    autoWatch: true,
+  	  },
 	},
 
 	//copies files to build directory where required
@@ -78,9 +78,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).
-  grunt.registerTask('default', ['htmllint','jshint','csslint','karma']);
-  grunt.registerTask('test', ['htmllint','jshint','csslint','karma']);
+  grunt.registerTask('default', ['htmllint','jshint','csslint']);
+  grunt.registerTask('lint', ['htmllint','jshint','csslint']);
+  grunt.registerTask('unittest',['karma']);
   grunt.registerTask('build',['uglify','copy']);
-  grunt.registerTask('doall', ['htmllint','jshint','csslint','karma','uglify','copy'])
+  
 
 };

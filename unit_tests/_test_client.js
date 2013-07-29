@@ -9,4 +9,10 @@
 			expect(client.mathAdd(10,20)).to.not.equal(5);
 		});
 	});
+
+	describe("Testing again",function() {
+		it("another test",function() {
+			expect("stuff").to.not.equal("stuff!");
+		});
+	});
 })();
