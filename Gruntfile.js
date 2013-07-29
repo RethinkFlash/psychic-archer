@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     			jQuery:true
     		},
     	},
-    	all: ['src/js/**/*.js','unit_tests/**/*.js']
+      files: ['src/js/client/*.js','src/js/server/*.js','unit_tests/**/*.js']
     },
 
     //linting CSS operation
