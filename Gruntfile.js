@@ -52,21 +52,21 @@ module.exports = function(grunt) {
   	    configFile: 'karma.conf.js',
   	    autoWatch: true,
   	  },
-	},
+    },
 
-	//copies files to build directory where required
-	copy: {
-		main: {
-			files: [
-				//copies html files
-				{expand: true, src: ['src/**/*.html'], dest:'build/'},
-				//copies css files
-				{expand: true, src: ['src/css/**/*.css'], dest:'build/'},
-				//any files in libs folder
-				{expand: true, src: ['src/js/libs/**/*.js'], dest:'build/'}
-			]
-		}
-	},
+  	//copies files to build directory where required
+  	copy: {
+  		main: {
+  			files: [
+  				//copies html files
+  				{expand: true, src: ['src/**/*.html'], dest:'build/'},
+  				//copies css files
+  				{expand: true, src: ['src/css/**/*.css'], dest:'build/'},
+  				//any files in libs folder
+  				{expand: true, src: ['src/js/libs/**/*.js'], dest:'build/'}
+  			]
+  		}
+  	},
   });
 
   // Load the plugin that provides the "uglify","jshint" task.
